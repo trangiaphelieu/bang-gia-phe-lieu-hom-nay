@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://trangiaphelieu.github.io/bang-gia-phe-lieu-hom-nay/sitemap.xml

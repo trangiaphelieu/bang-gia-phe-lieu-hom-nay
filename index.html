@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bảng giá phế liệu hôm nay – Tính tiền theo kg | Trạm Giá Phế Liệu</title>
+<meta name="description" content="Bảng giá phế liệu hôm nay cho sắt thép, nhôm, đồng, inox, chì, kẽm, nhựa, giấy, vải, bo mạch điện tử và ắc quy. Chọn loại, nhập số kg để tính tiền ngay, kèm hướng dẫn phân loại để bán được giá cao.">
+<link rel="canonical" href="https://trangiaphelieu.github.io/bang-gia-phe-lieu-hom-nay/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bảng giá phế liệu hôm nay – Trạm Giá Phế Liệu">
+<meta property="og:url" content="https://trangiaphelieu.github.io/bang-gia-phe-lieu-hom-nay/">
+<meta property="og:image" content="https://trangiaphelieu.github.io/bang-gia-phe-lieu-hom-nay/img/intro-1.webp">
+<base target="_top">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#1d4b3a; --forest-2:#2a6550; --copper:#b8672e; --copper-soft:#f6e8dc;
+    --paper:#f5f6f2; --card:#ffffff; --ink:#1b2420; --muted:#5d6a63; --line:#dfe4dd;
+    --warn:#9a4a00; --warn-soft:#fff1e0;
+  }
+  *{box-sizing:border-box}
+  /* height:auto để thuộc tính height của thẻ img không ép ảnh thành ảnh dọc */
+  img{max-width:100%;height:auto}
+  [hidden]{display:none!important}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Mulish",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:16px;line-height:1.6}
+  img{max-width:100%;display:block}
+  a{color:var(--forest-2)}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 16px}
+  h1,h2,h3{line-height:1.25;text-wrap:balance}
+
+  .top{background:var(--card);border-bottom:1px solid var(--line)}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:62px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:18px;color:var(--forest)}
+  .brand small{display:block;font-weight:600;font-size:12px;color:var(--muted)}
+  .nav{display:flex;gap:18px;font-weight:700;font-size:14px}
+  .nav a{text-decoration:none;color:var(--ink)}
+  .nav a:hover{color:var(--copper)}
+
+  /* Hero */
+  /* Section đầu: chữ trái – cụm ảnh phải */
+  .hero{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding:44px 0 40px}
+  .kicker{display:flex;align-items:center;gap:12px;font-size:14px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--forest-2);margin:0 0 8px}
+  .kicker::after{content:"";width:54px;height:5px;border-top:2px solid var(--copper);border-bottom:2px solid var(--copper)}
+  .hero h1{font-size:38px;font-weight:900;margin:0 0 18px;padding-bottom:16px;border-bottom:2px solid var(--line);color:var(--forest)}
+  .hero p{color:var(--ink);font-size:16.5px;margin:0 0 14px;max-width:62ch}
+  .hero p strong{color:var(--forest)}
+  .stats{display:flex;gap:26px;flex-wrap:wrap;margin:18px 0 4px}
+  .stats div{font-size:13px;color:var(--muted)}
+  .stats b{display:block;font-size:26px;font-weight:900;color:var(--copper);font-variant-numeric:tabular-nums}
+  .pills{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+  .pills a{display:inline-flex;align-items:center;gap:14px;padding:6px 6px 6px 22px;border:1.5px solid var(--copper);border-radius:999px;color:var(--copper);font-weight:800;text-decoration:none;background:var(--card)}
+  .pills a span{display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--forest);color:#fff;font-size:22px;line-height:1}
+  .pills a:hover{background:var(--copper-soft)}
+  .collage{position:relative;aspect-ratio:10/9;margin-bottom:28px}
+  .c-main{position:absolute;right:0;top:0;width:68%;height:100%;object-fit:cover;border-radius:6px}
+  .c-ph{position:absolute;width:47%;aspect-ratio:3/2;object-fit:cover;border:7px solid #fff;box-shadow:0 14px 30px rgba(29,75,58,.28)}
+  .c-ph1{left:0;top:2%;transform:rotate(-4deg)}
+  .c-ph2{left:3%;top:36%;transform:rotate(3deg)}
+  .c-ph3{left:0;top:68%;transform:rotate(-2deg)}
+
+  /* Tool */
+  .tool{display:grid;grid-template-columns:1.2fr .8fr;gap:0;background:var(--card);border-radius:20px;border:1px solid var(--line);overflow:hidden;box-shadow:0 18px 40px rgba(29,75,58,.08)}
+  .tool__in{padding:24px}
+  .tool__out{padding:24px;background:var(--forest);color:#e6efe9}
+  .tool h2{font-size:22px;margin:0 0 4px;color:var(--forest)}
+  .tool .hint{margin:0 0 16px;color:var(--muted);font-size:14px}
+  .rowhead,.row{display:grid;grid-template-columns:1fr 120px 36px;gap:8px}
+  .rowhead{font-size:13px;color:var(--muted);margin-bottom:4px}
+  .row{margin-bottom:8px}
+  select,input{width:100%;height:48px;padding:0 12px;font:inherit;font-size:16px;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:10px}
+  select:focus,input:focus{outline:2px solid var(--copper);outline-offset:-1px}
+  .del{border:0;background:none;color:var(--muted);font-size:20px;border-radius:8px;cursor:pointer}
+  .del:hover{background:var(--paper)}
+  .add{margin-top:4px;padding:10px 14px;border-radius:10px;border:1px dashed var(--forest-2);background:#fff;color:var(--forest-2);font:inherit;font-weight:700;cursor:pointer}
+  .add:hover{background:#eef5f1}
+  .tool__out h3{margin:0 0 12px;font-size:15px;font-weight:700;opacity:.85}
+  .lines{list-style:none;margin:0 0 14px;padding:0;font-size:14px}
+  .lines li{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+  .lines li b{white-space:nowrap;font-variant-numeric:tabular-nums}
+  .sum small{font-size:13px;opacity:.8}
+  .sum strong{display:block;font-size:28px;font-weight:900;color:#ffc79c;line-height:1.25;font-variant-numeric:tabular-nums}
+  .note{margin:12px 0 0;font-size:13px;opacity:.85}
+  .warn{background:var(--warn-soft);color:var(--warn);border-radius:10px;padding:9px 12px;font-size:13.5px;margin-top:12px}
+  .call{display:block;text-align:center;margin-top:14px;padding:12px;border-radius:12px;background:var(--copper);color:#fff;font-weight:800;text-decoration:none}
+
+  section{padding:50px 0 0}
+  section > h2,.sec-h{font-size:28px;font-weight:900;color:var(--forest);margin:0 0 8px}
+  .lead{color:var(--muted);margin:0 0 18px;max-width:760px}
+
+  /* Price table */
+  .filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+  .tab{padding:8px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);font:inherit;font-weight:700;font-size:14px;cursor:pointer;color:var(--ink)}
+  .tab.on{background:var(--forest);border-color:var(--forest);color:#fff}
+  .search{flex:1;min-width:200px;max-width:320px;margin-left:auto;height:42px}
+  /* Bảng dài 96 dòng: cuộn bên trong khung, tiêu đề cột ghim trên cùng */
+  .tbl{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:auto;max-height:640px}
+  .tbl thead th{position:sticky;top:0;z-index:1}
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--line)}
+  th{font-size:12px;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);background:#f0f3ee}
+  td.num{text-align:right;white-space:nowrap;font-weight:800;color:var(--copper);font-variant-numeric:tabular-nums}
+  .grp td{background:#eef5f1;font-weight:800;color:var(--forest)}
+  .empty{padding:18px;color:var(--muted)}
+
+  .why{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .why div{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+  .why h3{margin:0 0 6px;font-size:17px}
+  .why p{margin:0;color:var(--muted);font-size:15px}
+
+  /* Dịch vụ thu mua – lưới thẻ ảnh */
+  .svc{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .svc a{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;text-decoration:none;color:var(--ink);transition:transform .15s,box-shadow .15s}
+  .svc a:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(29,75,58,.14);border-color:var(--copper)}
+  .svc img{width:100%;aspect-ratio:16/10;object-fit:cover}
+  .svc b{display:block;padding:12px 14px 2px;font-size:15.5px;color:var(--forest)}
+  .svc span{display:block;padding:0 14px 14px;font-size:13.5px;color:var(--muted);line-height:1.45}
+
+  /* Quy trình 6 bước */
+  .steps{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:12px;counter-reset:st}
+  .steps li{position:relative;text-align:center;counter-increment:st}
+  .steps li::before{content:counter(st,decimal-leading-zero);display:grid;place-items:center;width:76px;height:76px;margin:0 auto 14px;border-radius:50%;border:2.5px solid var(--forest);background:var(--card);color:var(--forest);font-size:27px;font-weight:900;position:relative;z-index:1;box-shadow:0 6px 16px rgba(29,75,58,.12)}
+  .steps li:first-child::before{background:var(--copper);border-color:var(--copper);color:#fff}
+  .steps li:not(:last-child)::after{content:"";position:absolute;top:38px;left:calc(50% + 48px);right:calc(-50% + 42px);border-top:2px dashed #9fb5aa}
+  .steps h3{margin:0 0 6px;font-size:16.5px;color:var(--ink)}
+  .steps p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.55}
+
+  /* Blog */
+  .posts{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .post{text-align:center}
+  .post .thumb{position:relative;display:block;margin-bottom:14px}
+  .post img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px}
+  .post .date{position:absolute;left:12px;top:24px;display:flex;flex-direction:column;align-items:center;min-width:52px;padding:5px 6px;background:#fff;border:2px solid var(--copper);font-size:12px;font-weight:700;color:var(--copper);line-height:1.2}
+  .post .date b{font-size:22px}
+  .post h3{margin:0 0 6px;font-size:19px;line-height:1.35}
+  .post h3 a{color:var(--forest);text-decoration:none}
+  .post h3 a:hover{text-decoration:underline}
+  .post p{margin:0;color:var(--muted);font-size:15px}
+  .reader{margin-top:18px}
+  .reader article{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;max-width:820px}
+  .reader article h3{font-size:26px;margin:0 0 6px;color:var(--forest)}
+  .reader article .meta{color:var(--muted);font-size:14px;margin:0 0 16px}
+  .reader article img{border-radius:14px;margin:0 0 18px;aspect-ratio:16/8;object-fit:cover;width:100%}
+  .reader article h4{font-size:19px;margin:22px 0 6px}
+  .reader article p,.reader article li{max-width:68ch}
+  .reader article table{margin:10px 0 6px}
+  .close{float:right;border:0;background:var(--paper);border-radius:10px;padding:6px 12px;font:inherit;font-weight:700;cursor:pointer}
+
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin-bottom:10px}
+  details[open]{border-color:var(--forest-2)}
+  summary{font-weight:800;cursor:pointer}
+  details p{margin:10px 0 0;color:var(--muted)}
+  footer{margin-top:56px;background:var(--forest);color:#cfe0d7;font-size:14px;padding:24px 0}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  :focus-visible{outline:2px solid var(--copper);outline-offset:2px}
+
+  @media (max-width:900px){
+    .hero{grid-template-columns:1fr;gap:28px;padding-top:28px}
+    .tool{grid-template-columns:1fr}
+    .why,.posts{grid-template-columns:1fr}
+    .nav{display:none}
+    .svc{grid-template-columns:repeat(2,1fr)}
+    /* Quy trình chuyển sang dạng dọc, đường nối chạy bên trái */
+    .steps{grid-template-columns:1fr;gap:0}
+    .steps li{text-align:left;padding:0 0 22px 82px;min-height:86px}
+    .steps li::before{position:absolute;left:0;top:0;width:60px;height:60px;font-size:21px;margin:0}
+    .steps li:not(:last-child)::after{top:62px;bottom:0;left:29px;right:auto;border-top:0;border-left:2px dashed #9fb5aa}
+    .steps h3{padding-top:6px}
+  }
+  @media (max-width:520px){
+    .hero h1{font-size:27px}
+    .pills a{width:100%;justify-content:space-between}
+    .rowhead,.row{grid-template-columns:1fr 90px 32px}
+    .tool__in,.tool__out,.reader article{padding:18px}
+    .search{max-width:none;margin-left:0}
+    .svc{gap:10px}
+    .svc b{font-size:14.5px;padding:10px 10px 2px}
+    .svc span{display:none}
+    th,td{padding:8px 10px}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+        <rect width="34" height="34" rx="10" fill="#1d4b3a"/>
+        <path d="M8 24h18M11 24V14m6 10V10m6 14v-7" stroke="#e8a46f" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <span><span data-brand>Trạm Giá Phế Liệu</span><small>Giá thu mua kim loại cập nhật theo ngày</small></span>
+    </div>
+    <nav class="nav"><a href="#tinh-tien">Tính tiền</a><a href="#bang-gia">Bảng giá</a><a href="#dich-vu">Thu mua</a><a href="#quy-trinh">Quy trình</a><a href="blog/">Tin tức</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="intro__text">
+      <p class="kicker">Về <span data-brand>Trạm Giá Phế Liệu</span></p>
+      <h1>Bảng giá phế liệu hôm nay và công cụ tính tiền theo kg</h1>
+      <p><strong data-brand>Trạm Giá Phế Liệu</strong> tổng hợp giá thu mua <span class="js-count">90</span> loại phế liệu: sắt thép, nhôm, đồng, inox, kim loại màu, hợp kim, nhựa, giấy, vải, điện tử và ắc quy, chia theo từng mác và từng dạng hàng để bạn so được đúng loại mình đang có. Bảng giá cập nhật ngày <strong id="today"></strong>; hôm nay sắt vụn ở mức <strong id="capPrice"></strong> đ/kg.</p>
+      <p>Nhập số kg vào công cụ bên dưới để biết lô hàng trị giá bao nhiêu trước khi gọi người đến cân. Mục Tin tức cuối trang hướng dẫn cách phân loại tại chỗ để bán đúng giá.</p>
+      <div class="stats">
+        <div><b id="statCount">90</b>loại phế liệu</div>
+        <div><b id="statGroups">9</b>nhóm phế liệu</div>
+        <div><b>đ/kg</b>đơn vị tính</div>
+      </div>
+      <div class="pills">
+        <a href="#tinh-tien">Tính tiền phế liệu <span aria-hidden="true">›</span></a>
+        <a href="#bang-gia">Bảng giá phế liệu hôm nay <span aria-hidden="true">›</span></a>
+      </div>
+    </div>
+    <div class="collage">
+      <img class="c-main" src="img/intro-1.webp" width="1000" height="1000" alt="Bãi phế liệu kim loại lớn với máy gắp đang phân loại">
+      <img class="c-ph c-ph1" src="img/intro-2.webp" width="600" height="400" alt="Đống sắt vụn, thép tấm và linh kiện máy chờ phân loại" loading="lazy">
+      <img class="c-ph c-ph2" src="img/intro-3.webp" width="600" height="400" alt="Kiện phế liệu kim loại đã ép khối" loading="lazy">
+      <img class="c-ph c-ph3" src="img/intro-4.webp" width="600" height="400" alt="Sà lan chở phế liệu kim loại trên sông" loading="lazy">
+    </div>
+  </div>
+
+  <div class="tool" id="tinh-tien">
+    <div class="tool__in">
+      <h2>Tính tiền phế liệu</h2>
+      <p class="hint">Chọn loại phế liệu và nhập số kg. Có nhiều loại thì bấm "Thêm loại".</p>
+      <div class="rowhead"><span>Loại phế liệu</span><span>Số kg</span><span></span></div>
+      <div id="rows"></div>
+      <button type="button" class="add" id="addRow">+ Thêm loại</button>
+    </div>
+    <div class="tool__out" aria-live="polite">
+      <h3>Lô hàng của bạn</h3>
+      <ul class="lines" id="lines"></ul>
+      <div class="sum"><small>Tổng ước tính</small><strong id="total">0 đ</strong></div>
+      <div id="warn"></div>
+      <p class="note">Ước tính theo khung giá tham khảo. Giá chốt sau khi phân loại và cân tại chỗ.</p>
+      <a class="call" id="btnCall" hidden></a>
+    </div>
+  </div>
+
+  <section id="bang-gia">
+    <h2>Bảng giá thu mua phế liệu đầy đủ</h2>
+    <p class="lead">Đơn vị: đồng/kg. Khung giá thể hiện mức thấp nhất và cao nhất trong ngày, tùy độ sạch, mức phân loại và khối lượng lô.</p>
+    <div class="filters" id="tabs"></div>
+    <div class="tbl">
+      <table>
+        <thead><tr><th>Loại phế liệu</th><th style="text-align:right">Đơn giá (đ/kg)</th></tr></thead>
+        <tbody id="priceTable"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="dich-vu">
+    <h2>Thu mua tất cả các loại phế liệu</h2>
+    <p class="lead">Từ kim loại có giá trị cao như đồng, nhôm, inox đến nhựa, giấy, bo mạch điện tử và máy móc hư hỏng. Nhận lô lẻ ở cửa hàng, nhà dân cho tới lô lớn ở nhà xưởng, khu công nghiệp và công trình đang tháo dỡ. Bấm vào từng loại để xem giá.</p>
+    <div class="svc">
+      <a href="#bang-gia" data-g="Đồng"><img src="img/dv-dong.webp" width="720" height="450" alt="Dải đồng phế liệu đã qua sử dụng" loading="lazy"><b>Thu mua phế liệu đồng</b><span>Đồng cáp, đồng đỏ, đồng vàng, mạt đồng</span></a>
+      <a href="#bang-gia" data-g="Nhôm"><img src="img/dv-nhom.webp" width="720" height="450" alt="Phoi nhôm sau gia công cơ khí" loading="lazy"><b>Thu mua phế liệu nhôm</b><span>Nhôm thanh, xingfa, nhôm tấm, phoi nhôm</span></a>
+      <a href="#bang-gia" data-g="Inox"><img src="img/dv-inox.webp" width="720" height="450" alt="Tay vịn inox đã tháo dỡ" loading="lazy"><b>Thu mua phế liệu inox</b><span>Inox 304, 316, 201, 430 và inox lẫn tạp</span></a>
+      <a href="#bang-gia" data-g="Sắt thép"><img src="img/dv-sat.webp" width="720" height="450" alt="Bãi sắt thép phế liệu chờ phân loại" loading="lazy"><b>Thu mua phế liệu sắt thép</b><span>Sắt vụn, sắt công trình, gang, tôn cũ</span></a>
+      <a href="#bang-gia" data-g="Điện tử, máy móc"><img src="img/dv-dien.webp" width="720" height="450" alt="Bo mạch điện tử phế liệu" loading="lazy"><b>Thu mua phế liệu điện tử</b><span>Bo mạch, mainboard, linh kiện thanh lý</span></a>
+      <a href="#bang-gia" data-g="Chì, kẽm, thiếc, niken"><img src="img/dv-thiec.webp" width="720" height="450" alt="Cuộn thiếc hàn và mỏ hàn" loading="lazy"><b>Thu mua phế liệu thiếc</b><span>Thiếc hàn, dây thiếc, thiếc thừa</span></a>
+      <a href="#bang-gia" data-g="Chì, kẽm, thiếc, niken"><img src="img/dv-chi.webp" width="720" height="450" alt="Thỏi chì xếp chồng trong kho" loading="lazy"><b>Thu mua phế liệu chì, kẽm, niken</b><span>Chì cục, chì ắc quy, kẽm, niken</span></a>
+      <a href="#bang-gia" data-g="Điện tử, máy móc"><img src="img/dv-may.webp" width="720" height="450" alt="Máy móc cơ khí cũ hoen gỉ" loading="lazy"><b>Thu mua máy móc cũ</b><span>Motor, máy móc hư hỏng, dây chuyền cũ</span></a>
+      <a href="#bang-gia" data-g="Nhựa"><img src="img/dv-nhua.webp" width="720" height="450" alt="Bãi tập kết can nhựa HDPE chờ tái chế" loading="lazy"><b>Thu mua phế liệu nhựa</b><span>Chai PET, can HDPE, ống PVC, nhựa ABS</span></a>
+      <a href="#bang-gia" data-g="Giấy, nilon"><img src="img/dv-giay.webp" width="720" height="450" alt="Thùng carton cũ" loading="lazy"><b>Thu mua phế liệu giấy</b><span>Carton, giấy văn phòng, nilon, bao bì</span></a>
+      <a href="#bang-gia" data-g="Sắt thép"><img src="img/dv-congtrinh.webp" width="720" height="450" alt="Tôn cũ tháo từ mái nhà xưởng" loading="lazy"><b>Thu mua phế liệu công trình</b><span>Sắt thép, tôn, nhôm kính sau tháo dỡ</span></a>
+      <a href="#bang-gia" data-g="Tất cả"><img src="img/dv-xuong.webp" width="720" height="450" alt="Máy xúc đang gom phế liệu kim loại" loading="lazy"><b>Thu mua phế liệu khu công nghiệp</b><span>Thanh lý nhà xưởng, kho hàng tồn</span></a>
+    </div>
+  </section>
+
+  <section id="quy-trinh">
+    <p class="kicker">Quy trình</p>
+    <h2>Quy trình thu mua phế liệu 6 bước</h2>
+    <p class="lead">Lô nhỏ thường xong trong một buổi. Lô lớn ở nhà xưởng, công trình cần thêm bước khảo sát và hợp đồng để hai bên rõ ràng về giá và khối lượng.</p>
+    <ol class="steps">
+      <li><h3>Gửi thông tin lô hàng</h3><p>Cho biết loại phế liệu, khối lượng ước tính và địa chỉ. Gửi kèm ảnh để có giá tham khảo ngay.</p></li>
+      <li><h3>Khảo sát tại chỗ</h3><p>Kiểm tra loại hàng, độ sạch, khối lượng và mặt bằng tháo dỡ với các lô lớn.</p></li>
+      <li><h3>Chốt giá, hẹn lịch</h3><p>Thống nhất đơn giá cho từng loại và ngày giờ xe đến nhận hàng.</p></li>
+      <li><h3>Ký hợp đồng</h3><p>Lô của doanh nghiệp có hợp đồng mua bán, ghi rõ đơn giá và cách trừ tạp chất.</p></li>
+      <li><h3>Tháo dỡ, phân loại, cân</h3><p>Bốc xếp, tách theo nhóm, cân từng loại và ghi phiếu cân có chữ ký hai bên.</p></li>
+      <li><h3>Thanh toán</h3><p>Trả tiền mặt hoặc chuyển khoản ngay sau khi cân, kèm chứng từ khi cần.</p></li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Yếu tố nào chi phối giá thu mua phế liệu?</h2>
+    <p class="lead">Cùng một loại phế liệu, giá mỗi lần bán có thể khác nhau đôi chút. Có ba yếu tố chính tạo ra sự chênh lệch đó.</p>
+    <div class="why">
+      <div><h3>Quãng đường thu mua</h3><p>Kho càng xa thì chi phí xăng dầu, phí cầu đường và công đi lại càng lớn, phần này được trừ vào giá. Với lô lớn hoặc kho gần tuyến đường chính, khoản trừ thường rất nhỏ.</p></div>
+      <div><h3>Chất lượng phế liệu</h3><p>Mỗi loại có khung giá riêng: đồng đỏ cao hơn mạt đồng vàng, kim loại cao hơn giấy. Hàng sạch, ít tạp chất, dễ tái chế được tính ở đầu cao của khung; hàng gỉ sét, lẫn tạp bị tính ở đầu thấp.</p></div>
+      <div><h3>Cung cầu thị trường</h3><p>Giá bám theo cung cầu và giá kim loại thế giới. Khi các nhà máy tái chế cần nhiều nguyên liệu, giá thu mua tăng; khi thị trường dư hàng, giá giảm theo.</p></div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <h2>Tin tức phế liệu</h2>
+    <p class="lead">Cập nhật giá và kinh nghiệm phân loại, bán phế liệu được giá.</p>
+    <div class="posts" id="posts"></div>
+    <p style="text-align:center;margin-top:26px"><a href="blog/" style="font-weight:800;color:var(--forest)">Xem tất cả bài viết →</a></p>
+  </section>
+
+  <section>
+    <h2>Câu hỏi thường gặp</h2>
+    <details><summary>Bảng giá cập nhật khi nào?</summary><p>Giá được rà lại theo ngày làm việc. Ngày cập nhật hiển thị ở đầu trang. Giá đồng và nhôm biến động nhanh nhất vì bám theo giá kim loại thế giới.</p></details>
+    <details><summary>Bao nhiêu kg thì được thu mua tận nơi?</summary><p>Từ 500 kg với sắt, nhôm, inox; riêng đồng từ 100 kg. Lô nhỏ hơn nên gom thêm để không mất chi phí xe.</p></details>
+    <details><summary>Vì sao số tiền thực nhận khác số tính trên trang?</summary><p>Công cụ tính theo khung giá chung. Khi cân thực tế, người mua trừ tạp chất, độ ẩm và tính đúng loại cho từng phần trong lô, nên số tiền có thể nằm ở đầu thấp hoặc đầu cao của khung.</p></details>
+    <details><summary>Thanh toán thế nào?</summary><p>Thanh toán ngay sau khi cân, tiền mặt hoặc chuyển khoản, theo phiếu cân có chữ ký hai bên.</p></details>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong data-brand style="color:#fff">Trạm Giá Phế Liệu</strong> · Bảng giá thu mua kim loại tham khảo</div>
+    <div>Giá trên trang là giá tham khảo, không phải báo giá chính thức.</div>
+    <div style="flex-basis:100%;font-size:12px;opacity:.75">Ảnh: <a href="https://www.flickr.com/photos/37804979@N00/3360886332" rel="nofollow noopener" target="_blank" style="color:inherit">ahisgett</a>, <a href="https://www.flickr.com/photos/32345848@N07/5250736660" rel="nofollow noopener" target="_blank" style="color:inherit">Patrick Feller</a>, <a href="https://www.flickr.com/photos/98640399@N08/11376895666" rel="nofollow noopener" target="_blank" style="color:inherit">Barta IV</a>, <a href="https://www.flickr.com/photos/35468148654@N01/9022357032" rel="nofollow noopener" target="_blank" style="color:inherit">jared</a> , <a href="https://www.flickr.com/photos/90692748@N04/26272152760" rel="nofollow noopener" target="_blank" style="color:inherit">docoverachiever</a>, <a href="https://www.flickr.com/photos/132039626@N08/21893082089" rel="nofollow noopener" target="_blank" style="color:inherit">marketingthechange</a>, <a href="https://www.flickr.com/photos/28552335@N00/2922064485" rel="nofollow noopener" target="_blank" style="color:inherit">smlp.co.uk</a>, <a href="https://www.flickr.com/photos/71401718@N00/3200278405" rel="nofollow noopener" target="_blank" style="color:inherit">Wonderlane</a>, <a href="https://www.flickr.com/photos/21051491@N02/14943579150" rel="nofollow noopener" target="_blank" style="color:inherit">qubodup</a>, <a href="https://www.flickr.com/photos/39415781@N06/6066771151" rel="nofollow noopener" target="_blank" style="color:inherit">ell brown</a>, <a href="https://www.flickr.com/photos/36894712@N04/25069988352" rel="nofollow noopener" target="_blank" style="color:inherit">Creativity103</a>, <a href="https://www.flickr.com/photos/100780486@N02/23288165436" rel="nofollow noopener" target="_blank" style="color:inherit">mertie.</a>, <a href="https://www.flickr.com/photos/199916027@N04/53987173103" rel="nofollow noopener" target="_blank" style="color:inherit">WeenyBeany</a> (CC BY 2.0). Ảnh còn lại thuộc phạm vi công cộng.</div>
+  </div>
+</footer>
+
+<script>
+/* ============ CẤU HÌNH – sửa ở đây ============ */
+var CONFIG = {
+  brand: 'Trạm Giá Phế Liệu',
+  hotline: ''   // VD '0900 000 000'. Để trống thì ẩn nút gọi.
+};
+
+// [Nhóm, Loại, Giá thấp, Giá cao] – đ/kg. Khi đăng trên Apps Script có điền SHEET_ID,
+// giá trong Sheet sẽ thay thế danh sách này.
+var PRICES = [
+  ['Sắt thép','Sắt đặc',25000,30000],
+  ['Sắt thép','Sắt đề C, thép SKD',22000,28000],
+  ['Sắt thép','Thép phế liệu',20000,26000],
+  ['Sắt thép','Sắt vụn',22000,26000],
+  ['Sắt thép','Sắt vụn công nghiệp',22000,26000],
+  ['Sắt thép','Sắt gỉ sét',17000,22000],
+  ['Sắt thép','Bazo sắt',13000,19000],
+  ['Sắt thép','Bã sắt',10000,12000],
+  ['Sắt thép','Mạt sắt, phoi sắt',7000,12000],
+  ['Sắt thép','Sắt dây',20000,22000],
+  ['Sắt thép','Sắt công trình',21500,27000],
+  ['Sắt thép','Sắt máy, máy móc sắt',20000,30000],
+  ['Sắt thép','Sắt dây chuyền',20000,27000],
+  ['Sắt thép','Sắt tấm',21500,24500],
+  ['Sắt thép','Sắt đúc',21000,24000],
+  ['Sắt thép','Gang (gang xám, gang cầu)',14000,30000],
+  ['Sắt thép','Tôn cũ, tôn vụn',9000,18000],
+  ['Nhôm loại 1','Nhôm đặc',85000,130000],
+  ['Nhôm loại 1','Nhôm thanh',85000,130000],
+  ['Nhôm loại 1','Nhôm đà',85000,130000],
+  ['Nhôm loại 1','Nhôm xingfa',85000,130000],
+  ['Nhôm loại 1','Nhôm định hình',85000,120000],
+  ['Nhôm loại 2','Nhôm trắng, nhôm thỏi',75000,95000],
+  ['Nhôm loại 2','Hợp kim nhôm',75000,95000],
+  ['Nhôm loại 2','Nhôm tấm',75000,95000],
+  ['Nhôm loại 2','Nhôm CNC',75000,95000],
+  ['Nhôm loại 3','Nhôm xám',70000,80000],
+  ['Nhôm loại 3','Phôi nhôm',70000,80000],
+  ['Nhôm loại 3','Nhôm vụn',70000,80000],
+  ['Nhôm loại 3','Mạt nhôm',70000,80000],
+  ['Nhôm loại 3','Ba dớ nhôm',70000,80000],
+  ['Nhôm khác','Nhôm dẻo',79500,95000],
+  ['Nhôm khác','Lon nhôm',65000,75000],
+  ['Nhôm khác','Dây nhôm, cáp nhôm',65000,110000],
+  ['Nhôm khác','Nhôm máy',70000,85000],
+  ['Nhôm khác','Bột nhôm',14000,35000],
+  ['Đồng','Đồng cáp (đã bóc vỏ)',310000,460000],
+  ['Đồng','Đồng cáp (còn vỏ)',200000,300000],
+  ['Đồng','Đồng đỏ',300000,435000],
+  ['Đồng','Đồng vàng (đồng thau)',175000,355000],
+  ['Đồng','Mạt đồng',130000,220000],
+  ['Đồng','Mạt đồng đỏ',160000,245000],
+  ['Đồng','Mạt đồng vàng',120000,190000],
+  ['Đồng','Đồng cháy',175000,270000],
+  ['Đồng','Đồng vụn',140000,265000],
+  ['Đồng','Đồng nát, đồng tạp chất',100000,200000],
+  ['Đồng','Đồng dây (đã tuốt vỏ)',310000,460000],
+  ['Đồng','Dây điện đồng còn vỏ',150000,250000],
+  ['Đồng','Đồng tấm, đồng thanh',250000,380000],
+  ['Inox','Inox 304/304L',56000,66000],
+  ['Inox','Inox 316/316L',60000,90000],
+  ['Inox','Inox 201',38000,50000],
+  ['Inox','Inox 205/204',30000,48000],
+  ['Inox','Inox 430/434/439/441',22000,40000],
+  ['Inox','Inox 410/409/420/440',22000,40000],
+  ['Inox','Inox 340',14000,27000],
+  ['Inox','Inox 504/604',35000,40000],
+  ['Inox','Inox 510',25000,45000],
+  ['Inox','Inox 630/631',32000,55000],
+  ['Inox','Inox 202',40000,52000],
+  ['Inox','Inox 301',45000,58000],
+  ['Inox','Inox 321/347',56000,68000],
+  ['Inox','Inox 309/309S',65000,85000],
+  ['Inox','Inox 253MA',70000,95000],
+  ['Inox','Inox 310/310S',85000,110000],
+  ['Inox','Inox duplex 2205',60000,85000],
+  ['Inox','Inox duplex 2507',75000,100000],
+  ['Inox','Inox 904L',130000,180000],
+  ['Inox','Bazơ inox',20000,40000],
+  ['Inox','Inox máy móc, thiết bị (lẫn tạp)',20000,40000],
+  ['Inox','Inox tấm, cuộn',35000,66000],
+  ['Inox','Inox vụn',30000,60000],
+  ['Inox','Ba dớ inox',30000,60000],
+  // Nhóm dưới đây là giá thị trường tổng hợp (tháng 9–11/2026), chờ duyệt cùng bài GP03–GP07
+  ['Chì, kẽm, thiếc, niken','Chì cục, chì thỏi',40000,65000],
+  ['Chì, kẽm, thiếc, niken','Chì lưới, chì ắc quy',32000,58000],
+  ['Chì, kẽm, thiếc, niken','Kẽm thỏi, kẽm đúc',40000,65000],
+  ['Chì, kẽm, thiếc, niken','Thiếc hàn',350000,800000],
+  ['Chì, kẽm, thiếc, niken','Niken tấm, niken bi',250000,450000],
+  ['Hợp kim','Mũi khoan, dao phay hợp kim',400000,900000],
+  ['Hợp kim','Thép gió (HSS)',80000,200000],
+  ['Nhựa','Chai nhựa PET trong',8000,12000],
+  ['Nhựa','Chai nhựa PET màu',5000,8000],
+  ['Nhựa','Nhựa HDPE (can, két)',7000,15000],
+  ['Nhựa','Nhựa PVC (ống, máng)',6000,15000],
+  ['Nhựa','Nhựa PP (hộp, bao dệt)',5000,12000],
+  ['Nhựa','Nhựa ABS (vỏ thiết bị)',12000,25000],
+  ['Giấy, nilon','Giấy carton, bìa cát tông',3500,6000],
+  ['Giấy, nilon','Giấy văn phòng, giấy A4',4000,8000],
+  ['Giấy, nilon','Nilon xốp',5000,8000],
+  ['Giấy, nilon','Nilon sữa',8000,10500],
+  ['Ắc quy','Bình ắc quy chì (nguyên bình)',15000,30000],
+  // Nhóm mới 11/2026 – giá thị trường tổng hợp, chờ duyệt
+  ['Điện tử, máy móc','Bo mạch nguồn, bo tivi, chip IC thanh lý',50000,80000],
+  ['Điện tử, máy móc','Mainboard máy tính',150000,450000],
+  ['Điện tử, máy móc','Motor, động cơ điện cũ (quạt, bơm)',30000,65000],
+  ['Vải','Vải vụn, vải rẻo, giẻ lau',3000,9000],
+  ['Vải','Vải cây, vải tồn kho',18000,43000]
+];
+
+var POSTS = [
+ {
+  "id": "vi-sao-gia-dong-cap-chenh-lech",
+  "date": [
+   10,
+   11
+  ],
+  "tag": "Đồng",
+  "img": "img/blog-dong.webp",
+  "alt": "Cáp đồng phế liệu đã cắt đoạn",
+  "title": "Vì sao cùng là đồng cáp mà giá chênh tới 160.000 đ/kg?",
+  "ex": "Tỷ lệ vỏ nhựa, độ sáng của lõi và giá đồng trong ngày quyết định lô cáp của bạn được bao nhiêu.",
+  "url": "blog/vi-sao-gia-dong-cap-chenh-lech/"
+ },
+ {
+  "id": "phan-biet-nhom-loai-1-2-3",
+  "date": [
+   5,
+   11
+  ],
+  "tag": "Nhôm",
+  "img": "img/blog-nhom.webp",
+  "alt": "Nhôm thanh, nhôm tấm vụn đã gom riêng",
+  "title": "Nhôm loại 1, loại 2, loại 3 khác nhau thế nào?",
+  "ex": "Cách xếp nhôm thanh, nhôm tấm, nhôm vụn vào đúng loại để không bị tính giá thấp nhất.",
+  "url": "blog/phan-biet-nhom-loai-1-2-3/"
+ },
+ {
+  "id": "phan-biet-inox-304-va-201",
+  "date": [
+   29,
+   10
+  ],
+  "tag": "Inox",
+  "img": "img/blog-inox.webp",
+  "alt": "Tay vịn và ống inox sáng bóng",
+  "title": "Phân biệt inox 304 và inox 201 trước khi bán",
+  "ex": "Nam châm không đủ. Dùng thuốc thử hoặc máy bắn quang phổ để khỏi mất 15.000 đ mỗi kg.",
+  "url": "blog/phan-biet-inox-304-va-201/"
+ }
+];
+/* ============================================== */
+
+var $=function(id){return document.getElementById(id);};
+var activeGroup='Tất cả', query='';
+function fmt(n){return Math.round(n).toLocaleString('vi-VN');}
+function rng(a,b){return a===b?fmt(a):fmt(a)+' – '+fmt(b);}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function norm(s){return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/đ/g,'d');}
+function family(g){return g.indexOf('Nhôm')===0?'Nhôm':g;}
+function isCopper(p){return p[0]==='Đồng';}
+
+/* Tính tiền */
+function buildSelect(){
+  var s=document.createElement('select'),groups={};
+  s.setAttribute('aria-label','Loại phế liệu');
+  PRICES.forEach(function(p,i){
+    if(!groups[p[0]]){groups[p[0]]=document.createElement('optgroup');groups[p[0]].label=p[0];s.appendChild(groups[p[0]]);}
+    var o=document.createElement('option');o.value=i;o.textContent=p[1];groups[p[0]].appendChild(o);
+  });
+  return s;
+}
+function addRow(){
+  var r=document.createElement('div');r.className='row';
+  var s=buildSelect(),kg=document.createElement('input');
+  kg.type='number';kg.min='0';kg.step='any';kg.inputMode='decimal';kg.placeholder='Số kg';kg.setAttribute('aria-label','Số kg');
+  var d=document.createElement('button');d.type='button';d.className='del';d.textContent='✕';d.setAttribute('aria-label','Xóa dòng');
+  d.onclick=function(){if(document.querySelectorAll('#rows .row').length>1)r.remove();else kg.value='';calc();};
+  s.onchange=calc;kg.oninput=calc;
+  r.appendChild(s);r.appendChild(kg);r.appendChild(d);$('rows').appendChild(r);
+  return r;
+}
+function calc(){
+  var lo=0,hi=0,kgAll=0,kgCu=0,html='';
+  document.querySelectorAll('#rows .row').forEach(function(r){
+    var p=PRICES[r.querySelector('select').value],kg=parseFloat(r.querySelector('input').value)||0;
+    if(!p||kg<=0)return;
+    lo+=kg*p[2];hi+=kg*p[3];kgAll+=kg;if(isCopper(p))kgCu+=kg;
+    html+='<li><span>'+esc(p[1])+' · '+fmt(kg)+' kg</span><b>'+rng(kg*p[2],kg*p[3])+'</b></li>';
+  });
+  $('lines').innerHTML=html||'<li><span>Chưa nhập số kg</span><b>—</b></li>';
+  $('total').textContent=kgAll?rng(lo,hi)+' đ':'0 đ';
+  $('warn').innerHTML=(kgAll>0&&kgAll<500&&kgCu<100)?'<div class="warn">Lô '+fmt(kgAll)+' kg chưa đủ ngưỡng thu mua tận nơi (500 kg, riêng đồng 100 kg).</div>':'';
+}
+
+/* Bảng giá */
+function renderTabs(){
+  var fams=['Tất cả'];PRICES.forEach(function(p){var f=family(p[0]);if(fams.indexOf(f)<0)fams.push(f);});
+  $('tabs').innerHTML=fams.map(function(f){return '<button type="button" class="tab'+(f===activeGroup?' on':'')+'" data-g="'+esc(f)+'">'+esc(f)+'</button>';}).join('')+
+    '<input class="search" id="q" type="search" placeholder="Tìm loại phế liệu…" aria-label="Tìm loại phế liệu" value="'+esc(query)+'">';
+  $('tabs').querySelectorAll('.tab').forEach(function(b){b.onclick=function(){activeGroup=b.dataset.g;renderTabs();renderTable();};});
+  $('q').oninput=function(){query=this.value;renderTable();};
+}
+function renderTable(){
+  var q=norm(query.trim()),last='',html='';
+  PRICES.forEach(function(p){
+    // Đang gõ tìm kiếm thì tìm trên toàn bộ bảng, bỏ qua tab
+    if(!q&&activeGroup!=='Tất cả'&&family(p[0])!==activeGroup)return;
+    if(q&&norm(p[1]+' '+p[0]).indexOf(q)<0)return;
+    if(p[0]!==last){html+='<tr class="grp"><td colspan="2">'+esc(p[0])+'</td></tr>';last=p[0];}
+    html+='<tr><td>'+esc(p[1])+'</td><td class="num">'+rng(p[2],p[3])+'</td></tr>';
+  });
+  $('priceTable').innerHTML=html||'<tr><td colspan="2" class="empty">Không tìm thấy loại phù hợp. Thử gõ "đồng", "304", "nhôm thanh"…</td></tr>';
+}
+
+/* Blog */
+function renderPosts(){
+  $('posts').innerHTML=POSTS.map(function(p){
+    var d=p.date||[1,1];
+    // Có p.url (bản nhiều trang trên GitHub Pages) thì thẻ dẫn sang trang bài riêng; không có thì mở bài ngay trên trang
+    var href=p.url?p.url:'#'+p.id, open=p.url?'':' data-open="'+p.id+'"';
+    return '<article class="post"><a class="thumb" href="'+href+'"'+open+'><img src="'+p.img+'" width="1200" height="675" alt="'+esc(p.alt)+'" loading="lazy"><span class="date"><b>'+(d[0]<10?'0':'')+d[0]+'</b>Th'+d[1]+'</span></a><h3><a href="'+href+'"'+open+'>'+esc(p.title)+'</a></h3><p>'+esc(p.ex)+'</p></article>';
+  }).join('');
+  $('posts').querySelectorAll('[data-open]').forEach(function(b){b.onclick=function(e){e.preventDefault();openPost(b.dataset.open,true);};});
+  document.querySelectorAll('[data-close]').forEach(function(b){b.onclick=function(){openPost(null,false);};});
+}
+function openPost(id,scroll){
+  document.querySelectorAll('#reader article').forEach(function(a){a.hidden=a.id!==id;});
+  try{history.replaceState(null,'',id?'#'+id:location.pathname+location.search);}catch(e){}
+  if(id&&scroll)$(id).scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function start(){
+  $('statCount').textContent=PRICES.length;
+  document.querySelectorAll('.js-count').forEach(function(el){el.textContent=PRICES.length;});
+  var fams=[];PRICES.forEach(function(p){var f=family(p[0]);if(fams.indexOf(f)<0)fams.push(f);});$('statGroups').textContent=fams.length;
+  var sv=PRICES.filter(function(p){return p[1]==='Sắt vụn';})[0];$('capPrice').textContent=sv?rng(sv[2],sv[3]):'';
+  $('rows').innerHTML='';
+  var r=addRow();r.querySelector('select').value=String(PRICES.findIndex?Math.max(0,PRICES.findIndex(function(p){return p[1]==='Sắt vụn';})):0);r.querySelector('input').value='800';
+  renderTabs();renderTable();calc();
+}
+
+(function init(){
+  var d=new Date(Date.now()+7*3600e3);$('today').textContent=d.getUTCDate()+'/'+(d.getUTCMonth()+1)+'/'+d.getUTCFullYear();
+  document.querySelectorAll('[data-brand]').forEach(function(el){el.textContent=CONFIG.brand;});
+  if(CONFIG.hotline){var c=$('btnCall');c.hidden=false;c.href='tel:'+CONFIG.hotline.replace(/\s/g,'');c.textContent='Gọi báo giá: '+CONFIG.hotline;}
+  $('addRow').onclick=function(){addRow();calc();};
+  // Bấm thẻ dịch vụ → mở đúng tab nhóm trong bảng giá
+  document.querySelectorAll('.svc a[data-g]').forEach(function(a){a.onclick=function(){activeGroup=a.dataset.g;query='';renderTabs();renderTable();};});
+  renderPosts();start();
+  var h=location.hash.slice(1);if(h&&$(h)&&$(h).tagName==='ARTICLE')openPost(h,false);
+  // Trên Apps Script: lấy giá từ Sheet nếu đã cấu hình
+  if(window.google&&google.script&&google.script.run){
+    google.script.run.withSuccessHandler(function(rows){if(rows&&rows.length){PRICES=rows;start();}}).getPrices();
+  }
+})();
+</script>
+</body>
+</html>
